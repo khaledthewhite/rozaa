@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>روزا أنجل | متجر التجميل الأول</title>
+    <meta name="description" content="متجر روزا أنجل - وجهتك الأولى لمستحضرات التجميل والعطور وعناية البشرة الفاخرة">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-spa"></i></div>
+                <div class="logo-text">روزا <span>أنجل</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">خدماتنا</a></li>
+                <li><a href="discounts.html">الخصومات</a></li>
+                <li><a href="products.html">المنتجات</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-btn" title="سلة التسوق">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="القائمة">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section class="hero-slider" id="hero">
+        <div class="slider-track" id="sliderTrack"></div>
+        <button class="slider-btn prev" onclick="prevSlide()" aria-label="السابق">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <button class="slider-btn next" onclick="nextSlide()" aria-label="التالي">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="slider-dots" id="sliderDots"></div>
+    </section>
+
+    
+    <section class="about-section" id="about">
+        <div class="section-header">
+            <span class="section-tag">قصتنا</span>
+            <h2 class="section-title">من نحن</h2>
+            <p class="section-subtitle">نقدم لكِ أجمل ما في عالم الجمال</p>
+        </div>
+        <div class="about-content">
+            <p>متجر <strong>روزا أنجل</strong> يقدم لكِ أجود مستحضرات التجميل والعناية بالبشرة والعطور الفاخرة من أشهر الماركات العالمية، مع حرصنا الدائم على توفير أرقى المنتجات لجمالك وأناقتك اليومية. نؤمن بأن كل امرأة تستحق الأفضل.</p>
+            <br>
+            <a href="about.html" class="hero-btn" style="margin-top:8px;">
+                <i class="fa-solid fa-arrow-left"></i> اعرفي أكثر عنا
+            </a>
+        </div>
+    </section>
+
+    
+    <section class="services-section" id="services">
+        <div class="section-header">
+            <span class="section-tag"><i class="fa-solid fa-gem"></i> خدماتنا</span>
+            <h2 class="section-title">لماذا روزا أنجل؟</h2>
+            <p class="section-subtitle">نضمن لكِ تجربة تسوق لا مثيل لها</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                <h3>توصيل سريع</h3>
+                <p>توصيل آمن وسريع لجميع المحافظات حتى باب منزلِك في أسرع وقت.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-certificate"></i></div>
+                <h3>منتجات أصلية 100%</h3>
+                <p>نضمن لكِ جودة جميع المستحضرات والمنتجات المعروضة بشكل كامل.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+                <h3>دعم متواصل 24/7</h3>
+                <p>فريق خدمة العملاء متواجد دائماً للرد على كافة استفساراتِك.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="discounts-section" id="discounts">
+        <div class="section-header">
+            <span class="section-tag"><i class="fa-solid fa-fire"></i> عروض حصرية</span>
+            <h2 class="section-title">عروض وخصومات خاصة</h2>
+            <p class="section-subtitle">لا تفوتي هذه الفرص الرائعة</p>
+        </div>
+        <div class="products-grid">
+            <article class="product-card discount-card">
+                <span class="discount-badge">خصم 20%</span>
+                <div class="card-image-wrapper">
+                    <span class="card-tag"><i class="fa-solid fa-droplet"></i> عناية بالبشرة</span>
+                    <img src="img/product22.jpg" alt="كبسولات الكولاجين من ماركة ميديكوب الكورية" class="product-img">
+                    <a href="#" class="quick-view" onclick="openPayment(22, 'كبسولات الكولاجين من ماركة ميديكوب الكورية', 5500); return false;">
+                        <i class="fa-solid fa-credit-card"></i> اشتري الآن
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h3 class="product-name">كبسولات الكولاجين من ماركة ميديكوب الكورية</h3>
+                    <p class="product-desc">كبسولات مغذية للبشرة تعيد لها النضارة والحيوية.</p>
+                    <div class="card-footer-info">
+                        <div class="product-price"><del class="old-price">7,000</del> 5,500 <span>ر.ي</span></div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-buy" onclick="openPayment(22, 'كبسولات الكولاجين من ماركة ميديكوب الكورية', 5500)">
+                            <i class="fa-solid fa-credit-card"></i> اشتري
+                        </button>
+                        <button class="btn-add-cart" onclick="addToCart(22, 'كبسولات الكولاجين من ماركة ميديكوب الكورية', 5500, 'img/product22.jpg', 'عناية بالبشرة')">
+                            <i class="fa-solid fa-cart-plus"></i> السلة
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card discount-card">
+                <span class="discount-badge">خصم 15%</span>
+                <div class="card-image-wrapper">
+                    <span class="card-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> مكياج</span>
+                    <img src="img/product9.jpg" alt="ايشادو من شارلوت تيلبوري" class="product-img">
+                    <a href="#" class="quick-view" onclick="openPayment(9, 'ايشادو من شارلوت تيلبوري', 6500); return false;">
+                        <i class="fa-solid fa-credit-card"></i> اشتري الآن
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h3 class="product-name">ايشادو من شارلوت تيلبوري</h3>
+                    <p class="product-desc">مجموعة ألوان ساحرة لإطلالة عيون ناعمة ومتألقة.</p>
+                    <div class="card-footer-info">
+                        <div class="product-price"><del class="old-price">7,800</del> 6,500 <span>ر.ي</span></div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-buy" onclick="openPayment(9, 'ايشادو من شارلوت تيلبوري', 6500)">
+                            <i class="fa-solid fa-credit-card"></i> اشتري
+                        </button>
+                        <button class="btn-add-cart" onclick="addToCart(9, 'ايشادو من شارلوت تيلبوري', 6500, 'img/product9.jpg', 'مكياج')">
+                            <i class="fa-solid fa-cart-plus"></i> السلة
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div style="text-align:center; margin-top:28px;">
+            <a href="discounts.html" class="hero-btn">
+                <i class="fa-solid fa-tags"></i> عرض كل العروض
+            </a>
+        </div>
+    </section>
+
+    
+    <main class="main-container" id="products">
+        <div class="section-header">
+            <span class="section-tag"><i class="fa-solid fa-bag-shopping"></i> تشكيلتنا</span>
+            <h2 class="section-title">أبرز منتجاتنا</h2>
+            <p class="section-subtitle">تشكيلة مختارة بعناية لكِ</p>
+        </div>
+        <div class="products-grid">
+            <article class="product-card">
+                <div class="card-image-wrapper">
+                    <span class="card-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> مكياج</span>
+                    <img src="img/product1.jpg" alt="بلاشر" class="product-img">
+                    <a href="#" class="quick-view" onclick="openPayment(1,'بلاشر',28000); return false;">
+                        <i class="fa-solid fa-credit-card"></i> اشتري الآن
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h3 class="product-name">بلاشر</h3>
+                    <p class="product-desc">لمسة وردية ناعمة تمنح وجنتيكِ إشراقة طبيعية ومظهراً حيوياً.</p>
+                    <div class="card-footer-info">
+                        <div class="product-price">28,000 <span>ر.ي</span></div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-buy" onclick="openPayment(1,'بلاشر',28000)"><i class="fa-solid fa-credit-card"></i> اشتري</button>
+                        <button class="btn-add-cart" onclick="addToCart(1,'بلاشر',28000,'img/product1.jpg','مكياج')"><i class="fa-solid fa-cart-plus"></i> السلة</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="card-image-wrapper">
+                    <span class="card-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> مكياج</span>
+                    <img src="img/product2.jpg" alt="بودره سائبه من نارس" class="product-img">
+                    <a href="#" class="quick-view" onclick="openPayment(2,'بودره سائبه من نارس',19500); return false;">
+                        <i class="fa-solid fa-credit-card"></i> اشتري الآن
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h3 class="product-name">بودره سائبه من نارس</h3>
+                    <p class="product-desc">بودرة شفافة خفيفة لتثبيت المكياج وإعطاء ملمس مخملي.</p>
+                    <div class="card-footer-info">
+                        <div class="product-price">19,500 <span>ر.ي</span></div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-buy" onclick="openPayment(2,'بودره سائبه من نارس',19500)"><i class="fa-solid fa-credit-card"></i> اشتري</button>
+                        <button class="btn-add-cart" onclick="addToCart(2,'بودره سائبه من نارس',19500,'img/product2.jpg','مكياج')"><i class="fa-solid fa-cart-plus"></i> السلة</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="card-image-wrapper">
+                    <span class="card-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> مكياج</span>
+                    <img src="img/product4.jpg" alt="ماسڪارا إيسنس" class="product-img">
+                    <a href="#" class="quick-view" onclick="openPayment(4,'ماسڪارا إيسنس',32000); return false;">
+                        <i class="fa-solid fa-credit-card"></i> اشتري الآن
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h3 class="product-name">ماسڪارا إيسنس</h3>
+                    <p class="product-desc">ماسكارا لتكثيف وتطويل الرموش وإعطائها مظهراً جذاباً.</p>
+                    <div class="card-footer-info">
+                        <div class="product-price">32,000 <span>ر.ي</span></div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-buy" onclick="openPayment(4,'ماسڪارا إيسنس',32000)"><i class="fa-solid fa-credit-card"></i> اشتري</button>
+                        <button class="btn-add-cart" onclick="addToCart(4,'ماسڪارا إيسنس',32000,'img/product4.jpg','مكياج')"><i class="fa-solid fa-cart-plus"></i> السلة</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="card-image-wrapper">
+                    <span class="card-tag"><i class="fa-solid fa-droplet"></i> عناية بالبشرة</span>
+                    <img src="img/product5.jpg" alt="سيروم" class="product-img">
+                    <a href="#" class="quick-view" onclick="openPayment(5,'سيروم',13500); return false;">
+                        <i class="fa-solid fa-credit-card"></i> اشتري الآن
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h3 class="product-name">سيروم</h3>
+                    <p class="product-desc">سيروم مغذي بخلاصة الورد لترطيب البشرة بعمق.</p>
+                    <div class="card-footer-info">
+                        <div class="product-price">13,500 <span>ر.ي</span></div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-buy" onclick="openPayment(5,'سيروم',13500)"><i class="fa-solid fa-credit-card"></i> اشتري</button>
+                        <button class="btn-add-cart" onclick="addToCart(5,'سيروم',13500,'img/product5.jpg','عناية بالبشرة')"><i class="fa-solid fa-cart-plus"></i> السلة</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="card-image-wrapper">
+                    <span class="card-tag"><i class="fa-solid fa-spray-can-sparkles"></i> عطور</span>
+                    <img src="img/product10.jpg" alt="بلاشر من شيجلَام" class="product-img">
+                    <a href="#" class="quick-view" onclick="openPayment(10,'بلاشر من شيجلَام',34000); return false;">
+                        <i class="fa-solid fa-credit-card"></i> اشتري الآن
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h3 class="product-name">بلاشر من شيجلَام</h3>
+                    <p class="product-desc">نفحات زهرية أنثوية ساحرة بالورد الجوري والمسك.</p>
+                    <div class="card-footer-info">
+                        <div class="product-price">34,000 <span>ر.ي</span></div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-buy" onclick="openPayment(10,'بلاشر من شيجلَام',34000)"><i class="fa-solid fa-credit-card"></i> اشتري</button>
+                        <button class="btn-add-cart" onclick="addToCart(10,'بلاشر من شيجلَام',34000,'img/product10.jpg','عطور')"><i class="fa-solid fa-cart-plus"></i> السلة</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <div class="card-image-wrapper">
+                    <span class="card-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> مكياج</span>
+                    <img src="img/product6.jpg" alt="قلم ڪونتور" class="product-img">
+                    <a href="#" class="quick-view" onclick="openPayment(6,'قلم ڪونتور',26000); return false;">
+                        <i class="fa-solid fa-credit-card"></i> اشتري الآن
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h3 class="product-name">قلم ڪونتور</h3>
+                    <p class="product-desc">قلم تحديد وملء ملامح الوجه بقوام كريمي سهل الدمج.</p>
+                    <div class="card-footer-info">
+                        <div class="product-price">26,000 <span>ر.ي</span></div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-buy" onclick="openPayment(6,'قلم ڪونتور',26000)"><i class="fa-solid fa-credit-card"></i> اشتري</button>
+                        <button class="btn-add-cart" onclick="addToCart(6,'قلم ڪونتور',26000,'img/product6.jpg','مكياج')"><i class="fa-solid fa-cart-plus"></i> السلة</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div style="text-align:center; margin-top:36px;">
+            <a href="products.html" class="hero-btn">
+                <i class="fa-solid fa-bag-shopping"></i> عرض جميع المنتجات
+            </a>
+        </div>
+    </main>
+
+    
+    <footer class="site-footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3><i class="fa-solid fa-spa"></i> روزا أنجل</h3>
+                <p>وجهتك الأولى لكل ما يخص جمالكِ وأناقتكِ، نوفر أفضل منتجات التجميل والعناية بأسعار تنافسية وجودة عالية.</p>
+            </div>
+            <div class="footer-col">
+                <h3><i class="fa-solid fa-link"></i> روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-left"></i> الرئيسية</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-chevron-left"></i> من نحن</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-chevron-left"></i> خدماتنا</a></li>
+                    <li><a href="discounts.html"><i class="fa-solid fa-chevron-left"></i> الخصومات</a></li>
+                    <li><a href="products.html"><i class="fa-solid fa-chevron-left"></i> المنتجات</a></li>
+                    <li><a href="contact.html"><i class="fa-solid fa-chevron-left"></i> تواصل معنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3><i class="fa-solid fa-address-book"></i> تواصل معنا</h3>
+                <p><i class="fa-solid fa-location-dot"></i> اليمن - صنعاء / تعز</p>
+                <p><i class="fa-solid fa-phone"></i> +967 770 000 000</p>
+                <p><i class="fa-solid fa-envelope"></i> info@rosaangel.com</p>
+                <p><i class="fa-brands fa-whatsapp"></i> واتساب: +967 770 000 000</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة 2026 | م : دعاء العليمي</p>
+        </div>
+    </footer>
+
+    
+    <div class="payment-modal" id="paymentModal">
+        <div class="payment-card">
+            <div class="payment-header">
+                <i class="fa-solid fa-lock"></i>
+                <div>
+                    <h3>الدفع الآمن بالبطاقة</h3>
+                    <p>بياناتك محمية ومشفرة بالكامل</p>
+                </div>
+                <button class="payment-close" onclick="closePayment()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="payment-body">
+                <div class="payment-form-content">
+                    <div class="payment-product-info">
+                        <span class="payment-product-name" id="pay-product-name">المنتج</span>
+                        <span class="payment-product-price" id="pay-product-price">0 ر.ي</span>
+                    </div>
+                    
+                    <div class="card-visual">
+                        <div class="card-chip"></div>
+                        <div class="card-number-display" id="card-number-display">•••• •••• •••• ••••</div>
+                        <div class="card-info-row">
+                            <div>
+                                <div class="lbl">صاحبة البطاقة</div>
+                                <div class="val" id="card-name-display">اسم صاحب البطاقة</div>
+                            </div>
+                            <div>
+                                <div class="lbl">تاريخ الانتهاء</div>
+                                <div class="val" id="card-expiry-display">MM/YY</div>
+                            </div>
+                            <div class="card-brand"><i class="fa-brands fa-cc-visa"></i></div>
+                        </div>
+                    </div>
+                    
+                    <form id="paymentForm" autocomplete="off">
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-user"></i> اسم صاحبة البطاقة</label>
+                            <input type="text" id="inp-card-name" class="form-input" placeholder="الاسم كما على البطاقة" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-credit-card"></i> رقم البطاقة</label>
+                            <input type="text" id="inp-card-number" class="form-input" placeholder="0000 0000 0000 0000" maxlength="19" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fa-solid fa-calendar"></i> تاريخ الانتهاء</label>
+                                <input type="text" id="inp-card-expiry" class="form-input" placeholder="MM/YY" maxlength="5" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fa-solid fa-shield"></i> CVV</label>
+                                <input type="password" class="form-input" placeholder="•••" maxlength="4" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-pay">
+                            <i class="fa-solid fa-lock"></i> إتمام الدفع الآن
+                        </button>
+                        <div class="secure-note">
+                            <i class="fa-solid fa-shield-halved"></i> دفع آمن ومشفر بتقنية SSL
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="order-success" style="display:none;">
+                    <div class="order-success-icon"><i class="fa-solid fa-check"></i></div>
+                    <h3>تم الطلب بنجاح! 🎉</h3>
+                    <p>شكراً لكِ! تم استلام طلبك وسيتم التواصل معكِ قريباً لتأكيد التوصيل.<br>نتمنى لكِ تجربة تسوق رائعة مع روزا أنجل 🌸</p>
+                    <br>
+                    <button onclick="closePayment()" class="hero-btn" style="border:none; cursor:pointer; font-family:inherit; font-size:14px;">
+                        <i class="fa-solid fa-bag-shopping"></i> متابعة التسوق
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

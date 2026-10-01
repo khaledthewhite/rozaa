@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جميع المنتجات | روزا أنجل</title>
+    <meta name="description" content="تصفحي جميع منتجات روزا أنجل من مكياج، عناية بالبشرة وعطور فاخرة">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-spa"></i></div>
+                <div class="logo-text">روزا <span>أنجل</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">خدماتنا</a></li>
+                <li><a href="discounts.html">الخصومات</a></li>
+                <li><a href="products.html" class="active">المنتجات</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="nav-toggle" aria-label="القائمة"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="page-banner">
+        <div class="page-banner-content">
+            <div class="page-banner-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+            <h1>جميع منتجاتنا</h1>
+            <p>تشكيلة متنوعة من أفضل منتجات التجميل والعناية بالبشرة والعطور</p>
+            <div class="breadcrumb">
+                <a href="index.html">الرئيسية</a>
+                <i class="fa-solid fa-chevron-left"></i>
+                <span>المنتجات</span>
+            </div>
+        </div>
+    </div>
+
+    
+    <section class="page-section">
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="الكل" onclick="renderProducts('الكل')">
+                <i class="fa-solid fa-grip"></i> الكل
+            </button>
+            <button class="filter-btn" data-filter="مكياج" onclick="renderProducts('مكياج')">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> مكياج
+            </button>
+            <button class="filter-btn" data-filter="عناية بالبشرة" onclick="renderProducts('عناية بالبشرة')">
+                <i class="fa-solid fa-droplet"></i> عناية بالبشرة
+            </button>
+            <button class="filter-btn" data-filter="عطور" onclick="renderProducts('عطور')">
+                <i class="fa-solid fa-spray-can-sparkles"></i> عطور
+            </button>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+            
+        </div>
+    </section>
+
+    
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3><i class="fa-solid fa-spa"></i> روزا أنجل</h3>
+                <p>وجهتك الأولى لكل ما يخص جمالكِ وأناقتكِ، نوفر أفضل منتجات التجميل والعناية.</p>
+            </div>
+            <div class="footer-col">
+                <h3><i class="fa-solid fa-link"></i> روابط سريعة</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fa-solid fa-chevron-left"></i> الرئيسية</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-chevron-left"></i> من نحن</a></li>
+                    <li><a href="services.html"><i class="fa-solid fa-chevron-left"></i> خدماتنا</a></li>
+                    <li><a href="discounts.html"><i class="fa-solid fa-chevron-left"></i> الخصومات</a></li>
+                    <li><a href="products.html"><i class="fa-solid fa-chevron-left"></i> المنتجات</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3><i class="fa-solid fa-address-book"></i> تواصل معنا</h3>
+                <p><i class="fa-solid fa-location-dot"></i> اليمن - صنعاء / تعز</p>
+                <p><i class="fa-solid fa-phone"></i> +967 770 000 000</p>
+                <p><i class="fa-solid fa-envelope"></i> info@rosaangel.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة 2026 | م : دعاء العليمي</p>
+        </div>
+    </footer>
+
+    
+    <div class="payment-modal" id="paymentModal">
+        <div class="payment-card">
+            <div class="payment-header">
+                <i class="fa-solid fa-lock"></i>
+                <div><h3>الدفع الآمن بالبطاقة</h3><p>بياناتك محمية ومشفرة</p></div>
+                <button class="payment-close" onclick="closePayment()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="payment-body">
+                <div class="payment-form-content">
+                    <div class="payment-product-info">
+                        <span class="payment-product-name" id="pay-product-name">المنتج</span>
+                        <span class="payment-product-price" id="pay-product-price">0 ر.ي</span>
+                    </div>
+                    <div class="card-visual">
+                        <div class="card-chip"></div>
+                        <div class="card-number-display" id="card-number-display">•••• •••• •••• ••••</div>
+                        <div class="card-info-row">
+                            <div><div class="lbl">صاحبة البطاقة</div><div class="val" id="card-name-display">اسم صاحب البطاقة</div></div>
+                            <div><div class="lbl">تاريخ الانتهاء</div><div class="val" id="card-expiry-display">MM/YY</div></div>
+                            <div class="card-brand"><i class="fa-brands fa-cc-visa"></i></div>
+                        </div>
+                    </div>
+                    <form id="paymentForm" autocomplete="off">
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-user"></i> اسم صاحبة البطاقة</label>
+                            <input type="text" id="inp-card-name" class="form-input" placeholder="الاسم كما على البطاقة" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-credit-card"></i> رقم البطاقة</label>
+                            <input type="text" id="inp-card-number" class="form-input" placeholder="0000 0000 0000 0000" maxlength="19" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fa-solid fa-calendar"></i> تاريخ الانتهاء</label>
+                                <input type="text" id="inp-card-expiry" class="form-input" placeholder="MM/YY" maxlength="5" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fa-solid fa-shield"></i> CVV</label>
+                                <input type="password" class="form-input" placeholder="•••" maxlength="4" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-pay"><i class="fa-solid fa-lock"></i> إتمام الدفع الآن</button>
+                        <div class="secure-note"><i class="fa-solid fa-shield-halved"></i> دفع آمن ومشفر بتقنية SSL</div>
+                    </form>
+                </div>
+                <div class="order-success" style="display:none;">
+                    <div class="order-success-icon"><i class="fa-solid fa-check"></i></div>
+                    <h3>تم الطلب بنجاح! 🎉</h3>
+                    <p>شكراً لكِ! سيتم التواصل معكِ قريباً 🌸</p>
+                    <br>
+                    <button onclick="closePayment()" class="hero-btn" style="border:none;cursor:pointer;font-family:inherit;font-size:14px;"><i class="fa-solid fa-bag-shopping"></i> متابعة التسوق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
